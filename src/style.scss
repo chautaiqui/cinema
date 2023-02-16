@@ -1,0 +1,12 @@
+@import '~antd/dist/antd.css';
+
+#root {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background: #d9d9d9;
+  overflow: hidden;
+}
