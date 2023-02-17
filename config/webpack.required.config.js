@@ -61,7 +61,6 @@ const config = {
       {
         // config for images
         test: /\.(png|jpe?g|gif|svg)$/i,
-        dependency: { not: ['url'] },
         type: 'asset/resource',
       },
       {

@@ -3,7 +3,8 @@ import { getConfig, getMovieNowPlaying } from "./appThunk";
 
 const initAppState = {
   config: {},
-  movies: []
+  movies: [],
+  loading: true,
 };
 
 const appSlice = createSlice({
@@ -22,21 +23,9 @@ const appSlice = createSlice({
         .addCase(getConfig.fulfilled, (state, action) => {
           const { payload } = action;
           state.config = payload
-          console.log(state, payload)
+          state.loading = false
         })
         .addCase(getConfig.rejected, (state, action) => {
-          console.log('rejected', state, action);
-        })
-        // getMovieNowPlaying
-        .addCase(getMovieNowPlaying.pending, (state, action) => {
-          console.log('pending', state, action);
-        })
-        .addCase(getMovieNowPlaying.fulfilled, (state, action) => {
-          const { payload } = action;
-          state.movies = payload
-          console.log(state, payload)
-        })
-        .addCase(getMovieNowPlaying.rejected, (state, action) => {
           console.log('rejected', state, action);
         })
     }

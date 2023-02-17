@@ -19,7 +19,6 @@ export function useNetwork() {
   useEffect(() => {
     const debouncedHandleNetworkChange = debounce(function handleNetworkChange() {
       const networkStatus = navigator.connection.downlink > 0;
-      console.log('networkStatus ', networkStatus)
       setStatus(networkStatus); // test
     }, 100)
     navigator.connection.addEventListener("change", debouncedHandleNetworkChange);

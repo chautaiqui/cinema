@@ -10,7 +10,6 @@ export default class CallAPI {
   }
 
   getMethod = async (endpoint, query = {}) => {
-    console.log('get method', query)
     try {
       const request = axios({
         url: endpoint,

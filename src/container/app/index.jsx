@@ -6,19 +6,17 @@ import NetworkError from '@/components/networkError';
 import RouterContainer from '@/auth/router';
 
 export default function App() {
-  // const config = useSelector((state) => state.config)
+  const config = useSelector((state) => state.appReducer)
   const dispatch = useDispatch();
   const statusNetwork = useNetwork();
   useEffect(() => {
     // get config
     dispatch(getConfig());
-    dispatch(getMovieNowPlaying({language: 'en-US'}));
   }, [])
   return (
     <>
-      {statusNetwork && <div>
+      {statusNetwork && !config.loading && <div>
         <RouterContainer>
-          Qui
         </RouterContainer>
       </div>}
       {!statusNetwork && <NetworkError />}

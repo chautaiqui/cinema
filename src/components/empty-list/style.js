@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-const NetworkErrorContainer = styled.div`
+const EmptyContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 400px;
   gap: 20px;
-  .noti-network {
+  h3 {
     position: absolute;
     left: 0;
     right: 0;
@@ -19,4 +19,4 @@ const NetworkErrorContainer = styled.div`
   }
 `
 
-export default NetworkErrorContainer;
+export default EmptyContainer

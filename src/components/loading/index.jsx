@@ -4,7 +4,8 @@ import LoadingContainer from './style'
 function Loading() {
   return (
     <LoadingContainer>
-      <div class="lds-facebook"><div></div><div></div><div></div></div>
+      <div className="mask"></div>
+      <div className="lds-facebook"><div></div><div></div><div></div></div>
     </LoadingContainer>
   )
 }

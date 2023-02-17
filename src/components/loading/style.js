@@ -7,6 +7,18 @@ const LoadingContainer = styled.div`
   justify-content: center;
   align-items: center;
   background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  .mask {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    position: absolute;
+  }
   .lds-facebook {
     display: inline-block;
     position: relative;
@@ -18,7 +30,7 @@ const LoadingContainer = styled.div`
     position: absolute;
     left: 8px;
     width: 16px;
-    background: #fff;
+    background: #FC7300;
     animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
   }
   .lds-facebook div:nth-child(1) {

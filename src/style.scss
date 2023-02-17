@@ -23,6 +23,10 @@
   flex-direction: column;
   height: 100vh;
   background: #d9d9d9;
-  overflow: hidden;
+  // overflow: hidden;
   font-family: SourceSansPro-Regular;
+}
+#root > div, #root > div > div {
+  width: 100%;
+  height: 100%;
 }

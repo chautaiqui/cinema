@@ -10,13 +10,19 @@ function RouterContainer() {
         <Route
           path="/now-playing"
           element={
-            <LayoutApp componentName='now playing' />
+            <LayoutApp componentName='now-playing' />
           }
         />
         <Route
           path="/top-rated"
           element={
-            <LayoutApp componentName='top rated' />
+            <LayoutApp componentName='top-rated' />
+          }
+        />
+        <Route
+          path="/movie/:movieId"
+          element={
+            <LayoutApp componentName='movie' />
           }
         />
       </Route>

@@ -1,6 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import ConfigAPI from "@/api/config";
-import MoviesApi from "@/api/movies";
 
 const getConfig = createAsyncThunk(
   'app/config',
@@ -11,12 +10,4 @@ const getConfig = createAsyncThunk(
   }
 )
 
-const getMovieNowPlaying = createAsyncThunk(
-  'app/movienowplaying',
-  async (param) => {
-    const movieApi = new MoviesApi();
-    const req = await movieApi.getNowPlaying('movie/now_playing', param);
-    return req;
-  }
-)
-export { getConfig, getMovieNowPlaying };
+export { getConfig };
