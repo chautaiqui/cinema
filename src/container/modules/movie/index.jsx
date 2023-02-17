@@ -2,11 +2,13 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getMovieDetail } from "./movieThunk"
+import MovieContainer from './style'
+import Loading from '@/components/loading'
 
 function Movie() {
   let { movieId } = useParams();
   const dispatch = useDispatch();
-  const detail = useSelector((state) => state.movieReducer)
+  const movieState = useSelector((state) => state.movieReducer)
   useEffect(() => {
     dispatch(getMovieDetail({
       id: movieId,
@@ -15,7 +17,12 @@ function Movie() {
   }, [])
 
   return (
-    <div>{ movieId }</div>
+    <MovieContainer>
+      {movieState.loading && <Loading />}
+      <div className="movie">
+
+      </div>
+    </MovieContainer>
   )
 }
 

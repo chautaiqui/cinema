@@ -18,27 +18,19 @@ const nowplayingSlice = createSlice({
       state.loading = action.payload;
     },
     setType: (state, action) => {
-      console.log(action.payload)
       state.type = action.payload;
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(getMovieNowPlaying.pending, (state, action) => {
-        // console.log('pending', state, action);
-      })
       .addCase(getMovieNowPlaying.fulfilled, (state, action) => {
         const { payload } = action
-        console.log('fulfilled', state, payload)
         const { dates, page, total_pages, total_results, results, endpoint } = payload
         state.movies = results
         state.loading = false
         state.query = {
           dates, page, total_pages, total_results, endpoint
         }
-      })
-      .addCase(getMovieNowPlaying.rejected, (state, action) => {
-        // console.log('rejected', state, action);
       })
   }
 })

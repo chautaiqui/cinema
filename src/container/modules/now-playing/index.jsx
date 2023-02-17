@@ -11,7 +11,7 @@ import { useScroll } from '@/hooks';
 import GridImage from '@/assets/images/grid_30.png';
 import ListImage from '@/assets/images/list_30.png';
 import { Form, Button, Input, Checkbox, Select } from 'antd';
-import EmptyList from '../../../components/empty-list';
+import EmptyList from '@/components/empty-list';
 
 function getListyear(startYear){
   startYear = (typeof(startYear) == 'undefined') ? 1980 : startYear
