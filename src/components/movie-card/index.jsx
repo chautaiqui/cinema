@@ -30,7 +30,7 @@ function MovieCard({ movie, type }) {
     <MovieCardContainer ref={ref} onClick={handleClickMovie} type={type}>
       <div className="card-img">
         {!loadImg && <div><Skeleton /></div>}
-        {init && <Image src={`${config.base_url}${config.backdrop_sizes[0]}/${movie.backdrop_path}`} loading="lazy" onLoad={handleLoaded} />}
+        {init && movie.backdrop_path && <Image src={`${config.base_url}${config.backdrop_sizes[0]}/${movie.backdrop_path}`} loading="lazy" onLoad={handleLoaded} />}
       </div>
       <div className="card-content">
         <div className='title'>
