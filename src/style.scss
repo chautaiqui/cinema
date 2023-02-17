@@ -1,5 +1,20 @@
 @import '~antd/dist/antd.css';
 
+@font-face {
+  font-family: SourceSansPro-Regular;
+  src: url('./assets/fonts/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: SourceSansPro-Bold;
+  src: url('./assets/fonts/SourceSansPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: SourceSansPro-SemiBold;
+  src: url('./assets/fonts/SourceSansPro-SemiBold.ttf') format('truetype');
+}
+
 #root {
   text-align: center;
   display: flex;
@@ -9,4 +24,5 @@
   height: 100vh;
   background: #d9d9d9;
   overflow: hidden;
+  font-family: SourceSansPro-Regular;
 }

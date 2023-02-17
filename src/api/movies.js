@@ -1,0 +1,13 @@
+import CallAPI from "./callApi";
+
+export default class MoviesApi extends CallAPI{
+  constructor() {
+    super()
+  }
+
+  async getNowPlaying(endpoint, query) {
+    const req = await this.getMethod(endpoint, query);
+    if (req.status === 200) return req.data;
+    return req
+  }
+}

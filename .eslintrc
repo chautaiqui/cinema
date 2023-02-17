@@ -8,20 +8,33 @@
   "rules": {
     // "prettier/prettier": ["error"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "class-methods-use-this": 0,
+    "arrow-body-style": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
       {
         "ts": "never",
-        "tsx": "never"
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never",
+        "mjs": "never"
       }
     ],
     "import/no-import-module-exports": 0,
-    "dot-notation": 0
+    "dot-notation": 0,
+    "no-param-reassign": ["error", { "props": false }],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "import/prefer-default-export": "off",
+    "prefer-arrow-callback": "off",
+    "no-useless-constructor": "off",
+    "react/prop-types": "off"
   },
   "settings": {
     "import/resolver": {
-      "alias": [["@", "./src/"]]
-    }
+      "alias": [["@", "./src/"]],
+      "typescript": {}
+    },
+    "import/extensions": ["never"]
   }
 }
