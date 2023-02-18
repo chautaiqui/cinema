@@ -34,11 +34,19 @@ The following **additional** features are implemented:
 
 I added settimeout to some call api to show loading
 
+## Start app in local
+
+recommend: node 16
+
+npm i
+
+npm start
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-> Please record screen to a GIF file and attach link here
+> https://drive.google.com/drive/folders/1i9txBzb0osBmLdxNiLIwXMmVCxEQMQ7Z?usp=sharing
 
 ## License
 
