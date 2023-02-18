@@ -114,7 +114,7 @@ function NowPlaying() {
             </Form>
           </div>
         </div>
-        <div className="list-movie">
+      <div className={`list-movie ${nowPlayingState.type === 'list' ? 'fl-col' : 'fl-row'}`}>
           {(!nowPlayingState.movies.length && <EmptyList />)}
           {
             nowPlayingState.movies.map((movie) => {

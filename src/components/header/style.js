@@ -3,6 +3,7 @@ import styled from "styled-components";
 const HeaderContainer = styled.div`
 height: 100px;
 position: relative;
+z-index: 99;
 nav {
   position: fixed;
   z-index: 20;

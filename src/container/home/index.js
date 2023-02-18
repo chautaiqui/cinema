@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
-import { Outlet, useNavigate } from "react-router-dom"
+import { Outlet, useNavigate, useLocation } from "react-router-dom"
 
 function Home() {
   const navigate = useNavigate();
+  const location = useLocation();
   useEffect(() => {
-    navigate("/now-playing");
+    if (location.pathname === '/') navigate("/now-playing");
   }, [])
   return (
     <Outlet />
